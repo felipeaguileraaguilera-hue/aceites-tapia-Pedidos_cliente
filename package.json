@@ -1,21 +1,2 @@
-{
-  "name": "aceites-tapia-horeca-cliente",
-  "version": "1.0.0",
-  "description": "Portal de Pedidos HORECA - Aceites Tapia (Vista Cliente)",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@supabase/supabase-js": "^2.45.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.0"
-  }
-}
+VITE_SUPABASE_URL=https://TU_PROYECTO.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJ...tu_anon_key_aqui
