@@ -1,5 +1,16 @@
 const B = "https://www.aceitestapia.com/wp-content/uploads";
 
+const hash = window.location.hash
+if (hash.includes('access_token=')) {
+  const params = new URLSearchParams(hash.substring(1))
+  const access_token = params.get('access_token')
+  const refresh_token = params.get('refresh_token')
+  if (access_token && refresh_token) {
+    supabase.auth.setSession({ access_token, refresh_token })
+    window.location.hash = '' // limpiar URL
+  }
+}
+
 export const FALLBACK_CATALOG = [
   { id:"F-PET-5L",   name:"PET Filtrado 5L",       description:"Caja 3 ud",  section:"PET Filtrado",    image_url:`${B}/2020/06/CAJA-PET-5L-300x300.jpg`, display_order:10 },
   { id:"F-PET-2L",   name:"PET Filtrado 2L",       description:"Caja 6 ud",  section:"PET Filtrado",    image_url:`${B}/2018/10/caja-PET-2L-300x300.jpg`, display_order:20 },
